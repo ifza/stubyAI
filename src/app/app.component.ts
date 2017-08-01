@@ -1,14 +1,26 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component,ViewChild } from '@angular/core';
+import { Platform,Tabs } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { AboutPage } from '../pages/about/about';
+import { ServePage } from '../pages/serve/serve';
+import { ProductPage } from '../pages/product/product';
+
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  @ViewChild('mainTabs') tabRef:Tabs;
+
+  // rootPage:any = HomePage; 
+  home:any = HomePage;
+  about:any = AboutPage;
+  serve:any=ServePage;
+  product:any=ProductPage;
+  // myview=MyViewPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -19,4 +31,5 @@ export class MyApp {
     });
   }
 }
+
 

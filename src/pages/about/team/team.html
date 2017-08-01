@@ -1,0 +1,24 @@
+<ion-content>
+    <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher> -->
+    <h1>我们的团队</h1>
+    <p>我们拥有动画师，策划师，设计师，客服与客户协同创新的方法，共同完成市场所需要的产品。</p>
+
+    <ion-list>
+        <ion-item *ngFor="let hero of teams">
+            <span class="badge">{{hero.name}}</span>
+        </ion-item>
+    </ion-list>
+    <div text-center>
+        <img src="assets/images/picture1.jpg" alt="">
+        <img src="assets/images/picture2.jpg" alt="">
+        <img src="assets/images/picture3.jpg" alt="">
+        <img src="assets/images/picture4.jpg" alt="">
+        <img src="assets/images/picture5.jpg" alt="">
+    </div>
+    <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载数据中...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll> -->
+</ion-content>

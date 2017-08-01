@@ -1,0 +1,22 @@
+<!-- 炫幕服务
+服务流程
+24H需求服务 -->
+<ion-header>
+    <ion-navbar>
+        <ion-title padding>{{tabindex}}</ion-title>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-segment [(ngModel)]="tabindex" color="primary" padding>
+            <ion-segment-button value="serve">炫幕服务</ion-segment-button>
+            <ion-segment-button value="process">服务流程</ion-segment-button>
+            <ion-segment-button value="demand">24小时需求服务</ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div [ngSwitch]="tabindex">
+        <div *ngSwitchCase="'serve'">炫幕服务</div>
+        <div *ngSwitchCase="'process'">服务流程</div>
+        <div *ngSwitchCase="'demand'">24小时需求服务</div>
+    </div>
+</ion-content>

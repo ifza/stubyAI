@@ -1,14 +1,7 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+    <banner></banner>
+    <!-- <button ion-button [navPush]="MyViewPage ">Go</button> -->
+    <!-- <button ion-button [navPush]="pushPage ">点击直接带参数调转</button> -->
+    <button ion-button (click)="goPage() ">跳转2</button>
+    <!-- <ion-nav [root]="myview">Test</ion-nav> -->
 </ion-content>
