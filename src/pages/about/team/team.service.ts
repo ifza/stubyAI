@@ -24,5 +24,17 @@ export class TeamService{
                 console.log(err)
             });
     }
+    getOriginJSON(){
+        let url ='http://192.168.1.13:841/home/index/test';
+        let list;
+        return this.http.get(url)
+        .toPromise()
+        .then(res=> res.json())
+        .catch(err=>{
+            console.log('err:'+err);
+        });
+        
+    }
+    
 
 }

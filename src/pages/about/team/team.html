@@ -6,10 +6,16 @@
     <p>我们拥有动画师，策划师，设计师，客服与客户协同创新的方法，共同完成市场所需要的产品。</p>
 
     <ion-list>
+        <ion-item *ngFor="let item of list">
+            {{item.title}}
+        </ion-item>
+    </ion-list>
+    <ion-list>
         <ion-item *ngFor="let hero of teams">
             <span class="badge">{{hero.name}}</span>
         </ion-item>
     </ion-list>
+
     <div text-center>
         <img src="assets/images/picture1.jpg" alt="">
         <img src="assets/images/picture2.jpg" alt="">

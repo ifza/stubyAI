@@ -7,14 +7,21 @@ import {TeamService} from './team.service';
 })
 export class TeamPage{
     teams;
+    list;
     // teamService = new TeamService();
     constructor(private teamService:TeamService){}  
 
-      ngOnInit():void{
+      ngOnInit():void{   
+         this.GetData(); 
           this.teamService.getJson().then(res=>this.teams = res);
         // this.teamService.getJSONData();       
         // this.teams = this.teamService.getJson();         
         // console.log(this.teams);
+    }
+    async GetData(){
+        await this.teamService.getOriginJSON().then(res=>{
+            this.list = res;
+        })
     }
 
 //     doRefresh(refresher){
