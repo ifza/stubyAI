@@ -35,6 +35,16 @@ export class TeamService{
         });
         
     }
+    getdata(){
+        let url = 'http://192.168.1.13:803/API/news/paging';
+        let list;
+        return this.http.get(url)
+        .toPromise()
+        .then(res=>res.json())
+        .catch(err=>{
+            console.log('err:'+err);
+        })
+    }
     
 
 }

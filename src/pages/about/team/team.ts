@@ -13,6 +13,7 @@ export class TeamPage{
 
       ngOnInit():void{   
          this.GetData(); 
+         let da = this.teamService.getdata();
           this.teamService.getJson().then(res=>this.teams = res);
         // this.teamService.getJSONData();       
         // this.teams = this.teamService.getJson();         
