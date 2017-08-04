@@ -4,10 +4,10 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class ProductService{
     constructor(private http:Http){}
-    paiging(){
+    paiging(params){
         let url = 'http://192.168.1.13:803/API/news/paging';
-        let list;
-        return this.http.get(url)
+        let list;        
+        return this.http.get(url,{params:params})
         .toPromise()
         .then(res=>res.json())
         .catch(err=>{
