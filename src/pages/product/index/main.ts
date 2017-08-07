@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import{ProductService} from '../../Service/product.service'
-import{MenuService} from '../../Service/menu.service'
+import{ProductService} from '../../../Service/product.service';
+import{MenuService} from '../../../Service/menu.service';
 @Component({
     templateUrl:'product.html',
         providers:[ProductService,MenuService]
