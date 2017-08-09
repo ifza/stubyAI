@@ -5,31 +5,32 @@
         </ion-title>
     </ion-navbar>
     <ion-toolbar>
-        <ion-segment [(ngModel)]="tabindex" (ionChange)="segmentChanged($event)" padding>
-            <ion-segment-button *ngFor="let item of navMenu" (ionSelect)="segmentChanged($event)" value="{{item.id}}">{{item.menuname}}</ion-segment-button>
-            <!-- <ion-segment-button value="website">网站制作</ion-segment-button>
+        <ion-segment padding [(ngModel)]="tabindex">
+            <!-- <ion-segment-button *ngFor="let item of navMenu" (ionSelect)="segmentChanged($event)" value="{{item.id}}">{{item.menuname}}</ion-segment-button> -->
+            <ion-segment-button value="website">网站制作</ion-segment-button>
             <ion-segment-button value="video">影视宣传</ion-segment-button>
             <ion-segment-button value="media">多媒体交互</ion-segment-button>
-            <ion-segment-button value="wechat">微信互动</ion-segment-button>
-            <ion-segment-button value="other">其他</ion-segment-button> -->
+            <ion-segment-button value="other">其他</ion-segment-button>
         </ion-segment>
     </ion-toolbar>
 </ion-header>
 <ion-content class="card-background-page">
-    <ion-card *ngFor="let i of list">
-        <img src="http://192.168.1.13:803/{{i.smallpic}}" />
-        <div class="card-title">{{i.title}}</div>
-
-    </ion-card>
-    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载数据中...">
-        </ion-infinite-scroll-content>
-    </ion-infinite-scroll>
+    <!-- <div *ngFor="let item of navMenu">
+        <product-list *ngIf="tabindex === item.id" [id]="item.id"></product-list>
+    </div> -->
     <div [ngSwitch]="tabindex">
-        <div *ngSwitchCase="'website'">网站制作</div>
-        <div *ngSwitchCase="'video'">影视宣传</div>
-        <div *ngSwitchCase="'media'">多媒体交互</div>
-        <div *ngSwitchCase="'wechat'">微信互动</div>
-        <div *ngSwitchCase="'other'">网站制作</div>
+
+        <div *ngSwitchCase="'website'">
+            <product-list [id]="4"></product-list>
+        </div>
+        <div *ngSwitchCase="'video'">
+            <product-list [id]="5"></product-list>
+        </div>
+        <div *ngSwitchCase="'media'">
+            <product-list [id]="6"></product-list>
+        </div>
+        <div *ngSwitchCase="'wechat'">
+            <product-list [id]="7"></product-list>
+        </div>
     </div>
 </ion-content>

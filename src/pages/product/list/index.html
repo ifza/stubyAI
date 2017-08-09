@@ -1,0 +1,13 @@
+<div *ngIf="list.length > 0">
+    <ion-card *ngFor="let i of list">
+        <img src="http://192.168.1.13:803/{{i.smallpic}}" />
+        <div class="card-title">{{i.title}}</div>
+    </ion-card>
+    <ion-infinite-scroll (ionInfinite)="loadPaging($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载数据中...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</div>
+<div *ngIf="list.length == 0">
+    <p>暂无数据</p>
+</div>

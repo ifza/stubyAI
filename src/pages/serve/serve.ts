@@ -3,7 +3,7 @@ import {Component}from '@angular/core';
     templateUrl:'serve.html'
 })
 export class ServePage{
-    public tabindex = 'process';
+    public tabindex = '炫幕服务';
     constructor(){
         console.log('ServePage')
     }

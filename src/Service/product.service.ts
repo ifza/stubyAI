@@ -1,12 +1,11 @@
 import {Injectable} from '@angular/core';
-import {Http,Response} from '@angular/http';
+import {Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class ProductService{
     constructor(private http:Http){}
     paiging(params){
-        let url = 'http://192.168.1.13:803/API/news/paging';
-        let list;        
+        let url = 'http://192.168.1.13:803/API/news/paging';     
         return this.http.get(url,{params:params})
         .toPromise()
         .then(res=>res.json())

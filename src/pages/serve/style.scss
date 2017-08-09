@@ -1,0 +1,20 @@
+.service-list {
+    padding: 0;
+    li {
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+        list-style: none;
+        i.iconfont {
+            font-size: 60px;
+            color: #88a7ec;
+        }
+        p {
+            font-size: 14px;
+            line-height: 28px;
+            text-indent: 24px;
+        }
+    }
+    li:last-child {
+        border: none;
+    }
+}

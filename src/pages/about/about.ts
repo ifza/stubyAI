@@ -1,6 +1,4 @@
 import {Component}from '@angular/core';
-import {TeamPage}from './team/team';
-import {Company}from './company/main';
 import {Map} from '../component/map/main';
 
 @Component({
@@ -8,9 +6,7 @@ import {Map} from '../component/map/main';
     templateUrl:'about.html'
 })
 export class AboutPage{
-    pet:string = 'desc';
-    team:any = TeamPage;
-    company:any = Company;
+    pet:string = '炫幕简介';
     map:any = Map;
     constructor(){
         console.log('AboutPage')

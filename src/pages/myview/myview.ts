@@ -1,12 +1,10 @@
 import {Component}from '@angular/core';
-import {NavController}from 'ionic-angular';
 
 @Component({
-    selector:'myview',
-    templateUrl:'myview.html'
+    templateUrl:'index.html'
 })
 export class MyViewPage{
-    constructor(public navCtrl:NavController){
-        console.log('test')
+    constructor(){
+        console.log('tesasast')
     }
 }

@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            {{data.title}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+    <h4 *ngIf="data.subtitle">{{data.subtitle}}</h4>
+    <div [innerHTML]="data.content">
+
+    </div>
+</ion-content>
