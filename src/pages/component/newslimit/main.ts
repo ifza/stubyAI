@@ -7,7 +7,7 @@ import {DetailsPage} from '../../news/details/main';
     providers:[NewsService]
 })
 export class NewsLimit{
-    @Input() url:String = "http://192.168.1.13:803/API/news/limit";    
+    @Input() url:String = "http://192.168.1.13:800/API/news/limit";    
     @Input() id:Number = 2;
     @Input() size:Number = 5;
     public nxPage:any = DetailsPage;

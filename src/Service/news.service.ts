@@ -5,7 +5,7 @@ import 'rxjs/add/operator/toPromise';
 
 export class NewsService{
     
- private single = 'http://192.168.1.13:803/API/news/single';    
+ private single = 'http://192.168.1.13:800/API/news/single';    
     constructor(private http:Http){}
     GetData(url,params){    
         return this.http.get(url,{params:params})

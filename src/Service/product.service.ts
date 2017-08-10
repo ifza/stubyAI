@@ -5,7 +5,7 @@ import 'rxjs/add/operator/toPromise';
 export class ProductService{
     constructor(private http:Http){}
     paiging(params){
-        let url = 'http://192.168.1.13:803/API/news/paging';     
+        let url = 'http://192.168.1.13:800/API/news/paging';     
         return this.http.get(url,{params:params})
         .toPromise()
         .then(res=>res.json())

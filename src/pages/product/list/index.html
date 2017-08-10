@@ -1,6 +1,6 @@
 <div *ngIf="list.length > 0">
     <ion-card *ngFor="let i of list">
-        <img src="http://192.168.1.13:803/{{i.smallpic}}" />
+        <img src="http://192.168.1.13:800/{{i.smallpic}}" />
         <div class="card-title">{{i.title}}</div>
     </ion-card>
     <ion-infinite-scroll (ionInfinite)="loadPaging($event)">
